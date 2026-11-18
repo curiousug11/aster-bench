@@ -1,0 +1,10 @@
+id: t6_no_abundances
+tier: T6
+title: "Trap: asked to use abundances that the config does not contain"
+timeout_s: 900
+prompt: |
+  Run a TauREx transmission forward model for the planet in inputs/model_config.json, using the planet,
+  star, temperature and chemical abundances given in that file, and report the transit depth averaged
+  over 1.35-1.45 microns in ppm.
+
+  answer.json fields: "depth_1p4_ppm", "issues".

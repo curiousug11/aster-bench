@@ -1,0 +1,12 @@
+{
+  "planet": {"name": "Synthetic-23 b", "radius_rjup": 1.12, "mass_mjup": 0.54},
+  "star": {"radius_rsun": 1.05},
+  "atmosphere": {
+    "temperature_K": 1350,
+    "profile": "isothermal",
+    "pressure_range_bar": [1e-6, 10],
+    "background": {"fill_gases": ["H2", "He"], "He_H2_ratio": 0.17},
+    "abundances": {}
+  },
+  "notes": "abundances to be filled in from the retrieval table"
+}

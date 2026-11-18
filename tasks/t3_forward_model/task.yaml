@@ -1,0 +1,16 @@
+id: t3_forward_model
+tier: T3
+title: TauREx transmission forward model binned to an instrument grid
+timeout_s: 1500
+prompt: |
+  Compute a transmission spectrum with TauREx for this planet:
+  - planet radius 0.92 R_Jup (defined at the bottom of the model atmosphere), mass 0.31 M_Jup
+  - host star radius 0.81 R_sun
+  - isothermal atmosphere at 870 K, 100 layers from 10 bar down to 1e-6 bar
+  - constant volume mixing ratios: H2O 1e-3, CH4 3e-4, CO2 2e-5, CO 5e-4
+  - the rest is H2 and He with He/H2 = 0.17
+  - include molecular absorption, Rayleigh scattering, and H2-H2 and H2-He collision-induced absorption
+
+  Then average the transit depth over each wavelength bin defined by the edges in inputs/bin_edges.txt (microns).
+
+  answer.json fields: "depth_ppm" (list, one value per bin, increasing wavelength), "issues".

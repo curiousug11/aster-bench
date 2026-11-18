@@ -1,0 +1,16 @@
+id: t3_bin_errors
+tier: T3
+title: Turn a high-resolution model into a binned synthetic observation with 50 ppm errors
+timeout_s: 900
+prompt: |
+  inputs/model_wavelength.npy (microns) and inputs/model_depth.npy (transit depth as a fraction) hold a
+  high-resolution transmission model. inputs/bin_edges.txt lists the wavelength bin edges (microns) of an
+  instrument.
+
+  Make a synthetic observation from it, without adding noise:
+  - average the model over each bin,
+  - give every bin a 1-sigma uncertainty of 50 ppm,
+  - save it as outputs/binned.dat in TauREx's 4-column observation format: wavelength (micron, bin centre),
+    transit depth, uncertainty, bin width (micron), one row per bin, in increasing wavelength.
+
+  answer.json fields: "n_bins", "issues".

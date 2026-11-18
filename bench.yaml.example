@@ -1,0 +1,5 @@
+# Paths to the shared science environment (see env/setup_env.sh)
+python: /path/to/aster-bench-env/venv/bin/python
+aster_home: /path/to/aster-bench-env/aster          # ASTER clone, pinned commit
+linelists: /path/to/aster-bench-env/linelists       # contains xsec/ and cia/
+fastchem_input: /path/to/aster-bench-env/fastchem_input

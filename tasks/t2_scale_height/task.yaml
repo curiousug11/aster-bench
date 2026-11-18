@@ -1,0 +1,16 @@
+id: t2_scale_height
+tier: T2
+title: Equilibrium temperature, gravity and scale height of a synthetic planet
+timeout_s: 600
+prompt: |
+  inputs/planet.json describes a transiting planet and its star. Assume zero Bond albedo and full
+  day-night heat redistribution, and a mean molecular weight of 2.3 (in atomic mass units).
+  Use R_Jup = 7.1492e7 m, M_Jup = 1.898e27 kg, R_sun = 6.957e8 m and 1 au = 1.495978707e11 m.
+
+  Compute:
+  - the planet's equilibrium temperature,
+  - its surface gravity at the given radius,
+  - the atmospheric pressure scale height at the equilibrium temperature,
+  - the change in transit depth produced by one scale height of atmosphere (2 H Rp / Rs^2).
+
+  answer.json fields: "teq_K", "gravity_m_s2", "scale_height_km", "signal_ppm", "issues".

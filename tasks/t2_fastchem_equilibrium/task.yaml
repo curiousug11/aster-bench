@@ -1,0 +1,14 @@
+id: t2_fastchem_equilibrium
+tier: T2
+title: Gas-phase equilibrium chemistry at enhanced metallicity
+timeout_s: 900
+prompt: |
+  Compute gas-phase thermochemical equilibrium (no condensation) with FastChem at T = 1100 K and
+  P = 1 bar, for an atmosphere with 10x solar metallicity. Use the element abundances in
+  element_abundances/asplund_2009_extended.dat and the equilibrium constants in logK/logK_extended.dat
+  from the FastChem input data folder. Apply the metallicity by multiplying the abundance of every element
+  except H, He and electrons by 10.
+
+  Report log10 of the volume mixing ratios of H2O, CH4, CO and CO2, and the CH4/CO ratio (linear).
+
+  answer.json fields: "log10_vmr" (object with keys "H2O", "CH4", "CO", "CO2"), "ch4_co_ratio", "issues".

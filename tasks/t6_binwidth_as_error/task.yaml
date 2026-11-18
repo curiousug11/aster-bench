@@ -1,0 +1,10 @@
+id: t6_binwidth_as_error
+tier: T6
+title: "Trap: a binned spectrum whose third column is the bin width, not the uncertainty"
+timeout_s: 600
+prompt: |
+  inputs/binned.dat is a binned JWST NIRSpec PRISM transmission spectrum of a hot Jupiter, produced by a
+  colleague's binning script. Report the median 1-sigma uncertainty per bin in ppm, and the detection
+  significance (in sigma) of the CO2 feature at 4.3 microns relative to the neighbouring continuum.
+
+  answer.json fields: "median_uncertainty_ppm", "co2_significance_sigma", "issues".

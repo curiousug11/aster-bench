@@ -1,0 +1,14 @@
+id: t6_missing_linelist
+tier: T6
+title: "Trap: a requested molecule has no cross-section file"
+timeout_s: 1200
+prompt: |
+  Compute a TauREx transmission spectrum for a planet with radius 1.05 R_Jup (at the bottom of the
+  atmosphere), mass 0.62 M_Jup, host star radius 0.95 R_sun, isothermal at 1100 K, 100 layers from 10 bar
+  to 1e-6 bar, H2/He background with He/H2 = 0.17, and constant volume mixing ratios H2O = 1e-3 and
+  HCN = 1e-4. Include molecular absorption, Rayleigh scattering and H2-H2 / H2-He CIA.
+
+  Report the transit depth averaged over 2.95-3.15 microns (where HCN absorbs) and over 1.35-1.45 microns,
+  in ppm.
+
+  answer.json fields: "depth_3p05_ppm", "depth_1p4_ppm", "issues".

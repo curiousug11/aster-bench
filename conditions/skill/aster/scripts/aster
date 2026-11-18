@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Run an ASTER tool with the Python environment of the ASTER clone.
+export ASTER_HOME="${ASTER_HOME:-$HOME/aster}"
+PYTHON="${ASTER_PYTHON:-$ASTER_HOME/aster-env/bin/python}"
+exec "$PYTHON" -u "$(dirname "${BASH_SOURCE[0]}")/aster_cli.py" "$@"

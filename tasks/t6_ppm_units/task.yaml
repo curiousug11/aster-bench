@@ -1,0 +1,10 @@
+id: t6_ppm_units
+tier: T6
+title: "Trap: transit depths given in ppm without saying so"
+timeout_s: 600
+prompt: |
+  inputs/spectrum.txt is a transmission spectrum (wavelength in microns, transit depth, uncertainty).
+  The host star's radius is 0.78 R_sun. What is the planet-to-star radius ratio at 1.40 microns, and the
+  planet's radius in Jupiter radii (R_Jup = 7.1492e7 m, R_sun = 6.957e8 m)?
+
+  answer.json fields: "rp_rs", "rp_rjup", "issues".
